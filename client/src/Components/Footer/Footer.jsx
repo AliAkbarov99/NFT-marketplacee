@@ -262,7 +262,7 @@ const Footer = () => {
             <div className="footer__up__middle__body">
               <p>Marketplace</p>
               <p>Rankings</p>
-              <p>Connect a wallet</p>
+              <p>Add Artist</p>
             </div>
           </div>
           <div className="footer__up__right">

@@ -164,8 +164,6 @@
      gap: 20px;
      width: 1049.41px;
      height: 33px;
-
-
  }
 
  .footer__down hr {
@@ -182,6 +180,329 @@
  }
 
 
- /* Responsive */
+ /* Responsive Tablet*/
 
- 
+ @media only screen and (max-width: 1280px) {
+
+     .footer {
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         margin-top: 0px;
+         width: 100%;
+         height: 703px;
+         padding: 40px 195px;
+         gap: 49px;
+     }
+
+     .footer__up {
+         display: flex;
+         flex-direction: column;
+         padding: 0px;
+         gap: 30px;
+         width: 690px;
+         height: 541px;
+     }
+
+     .footer__up__left {
+         display: flex;
+         flex-direction: column;
+         width: 690px;
+         height: 163px;
+         gap: 20px;
+     }
+
+     .footer__up__left__logo {
+         width: 243.41px;
+         height: 32px;
+     }
+
+     .footer__up__left__info {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         width: 690px;
+         height: 111px;
+     }
+
+     .footer__up__left__info p {
+         width: 690px;
+         height: 22px;
+     }
+
+     .footer__up__left__info__community {
+         display: flex;
+         flex-direction: column;
+         gap: 15px;
+         width: 690px;
+         height: 69px;
+     }
+
+     .footer__up__left__info__community p {
+         width: 690px;
+         height: 22px;
+     }
+
+     .footer__up__left__info__community__icons {
+         display: flex;
+         flex-direction: row;
+         gap: 10px;
+         width: 158px;
+         height: 32px;
+     }
+
+
+
+
+
+     .footer__up__middle {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         width: 690px;
+         height: 161px;
+     }
+
+     .footer__up__middle__title {
+         width: 690px;
+         height: 35px;
+     }
+
+     .footer__up__middle__body {
+         width: 690px;
+         height: 106px;
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+     }
+
+
+
+
+     .footer__up__right {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         width: 690px;
+         height: 157px;
+     }
+
+     .footer__up__right__title {
+         width: 690px;
+         height: 35px;
+     }
+
+     .footer__up__right__body {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         width: 690px;
+         height: 102px;
+     }
+
+     .footer__up__right__body p {
+         width: 690px;
+         height: 22px;
+     }
+
+     .footer__up__right__body button {
+         width: 179px;
+         height: 60px;
+         left: 241px;
+     }
+
+     .footer__up__right__body button:hover {
+         transform: scale(0.95);
+         cursor: pointer;
+     }
+
+     .footer__up__right__body input {
+         width: 420px;
+         height: 60px;
+         padding: 16px 0px 16px 20px;
+     }
+
+     .footer__down {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         width: 690px;
+         height: 33px;
+     }
+
+     .footer__down.footer__down hr {
+         width: 690px;
+         height: 0px;
+     }
+
+     .footer__down p {
+         width: 690px;
+         height: 13px;
+     }
+
+ }
+
+
+ /* RESPONSIVE TELEPHONE */
+
+
+ @media only screen and (max-width: 834px) {
+    .footer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px 195px;
+        gap: 30px;
+        background-color: #3B3B3B;
+        width: 100%;
+        height: 776px;
+    }
+
+    .footer__up{
+        padding: 0px;
+        gap: 30px;
+        flex-direction: column;
+        width: 315px;
+        height: 633px;
+    }
+
+    .footer__up__left{
+        padding: 0px;
+        gap: 20px;
+        flex-direction: column;
+        width: 315px;
+        height: 185px;
+    }
+    .footer__up__left__logo{
+        width: 243.41px;
+        height: 32px;
+    }
+    .footer__up__left__info{
+        padding: 0px;
+        gap: 20px;
+        flex-direction: column;
+        width: 315px;
+        height: 133px;
+    }
+
+    .footer__up__left__info p{
+        font-weight: 400;
+        font-size: 16px;
+        width: 315px;
+        height: 44px;
+    }
+    .footer__up__left__info__community{
+        gap: 15px;
+        width: 315px;
+        height: 69px;
+        flex-direction: column;
+    }
+
+    .footer__up__left__info__community p{
+        width: 315px;
+        height: 22px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+    }
+    .footer__up__left__info__community__icons{
+        gap: 10px;
+        flex-direction: row;
+        width: 158px;
+        height: 32px;
+    }
+
+    .footer__up__left__info__community__icons svg{
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .footer__up__middle{
+        gap: 20px;
+        flex-direction: column;
+        width: 315px;
+        height: 161px;
+    }
+
+    .footer__up__middle__title{
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 160%;
+        width: 315px;
+        height: 35px;
+    }
+    .footer__up__middle__body{
+        gap: 20px;
+        flex-direction: column;
+        width: 315px;
+        height: 106px;
+    }
+
+    .footer__up__right{
+        gap: 20px;
+        flex-direction: column;
+        width: 315px;
+        height: 227px;
+    }
+    .footer__up__right__title{
+        width: 315px;
+        height: 35px;
+        font-size: 22px;
+    }
+
+    .footer__up__right__body{
+        gap: 20px;
+        flex-direction: column;
+        width: 315px;
+        height: 172px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .footer__up__right__body p{
+        font-size: 16px;
+        line-height: 140%;
+        width: 315px;
+        height: 44px;
+    }
+    .footer__up__right__body button{
+        position: absolute;
+        bottom: 0px;
+        left:0px;
+        width: 315px;
+        height: 46px;
+        padding: 0px 50px;
+    }
+    .footer__up__right__body button:hover{
+        transform: scale(0.95);
+        cursor: pointer;
+    }
+    .footer__up__right__body input{
+        border: 1px solid #858584;
+        width: 315px;
+        height: 46px;
+        padding: 16px 20px;
+    }
+
+
+
+    .footer .footer__down{
+        gap: 20px;
+        flex-direction: column;
+        width: 315px;
+        height: 33px;
+    }
+    .footer .footer__down hr{
+        height: 0px;
+        width: 315px;
+        border: 1px solid #858584;
+    }
+    .footer .footer__down p{
+        width: 315px;
+        height: 13px;
+        font-size: 12px;
+        line-height: 110%;
+    }
+}
