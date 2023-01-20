@@ -33,7 +33,7 @@
 }
 
 .navbar__links a {
-
+    font-weight: 600;
     color: white;
     text-decoration: none;
     padding: 15px 20px;
