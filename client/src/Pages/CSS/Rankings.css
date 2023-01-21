@@ -1,0 +1,136 @@
+#creators{
+    background-color: #2b2b2b;
+}
+
+.creators__top{
+    padding: 80px 0px;
+    color: white;
+}
+
+.creators__top .container-sm div{
+    font-size: 51px;
+    font-weight: 600;
+}
+.creators__top .container-sm p{
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+.creators__top .container-sm div:last-child{
+    margin-top: 30px;
+    position: relative;
+}
+
+
+
+.creators__nav{
+    background-color: #2b2b2b;
+}
+
+.creators__nav .container-sm{
+    display: flex;
+    justify-content: center;
+    
+}
+.creators__nav .container-sm div{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+.creators__nav .container-sm div p{
+    font-size: 22px;
+    font-weight: 600;
+}
+.creators__nav .container-sm div span{
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-family: 'Space Mono', monospace;
+}
+
+.creators__nav__nfts{
+    padding: 18px 0px;
+    border-bottom: 2px solid #858584;
+}
+
+.creators__nav__nfts p{
+    color: white;
+}
+.creators__nav__nfts span{
+    background: #858584;
+}
+
+.creators__nav__collections p{
+    color: #858584;
+}
+.creators__nav__collections span{
+    background: #3B3B3B;
+}
+
+
+#creators__table{
+    margin-top: 40px;
+}
+
+.creators__table__header{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0px;
+    border: 1px solid #3b3b3b;
+    border-radius: 20px;
+    color: #3b3b3b;
+}
+.creators__table__header__left{
+    width: 40%;
+    display: flex;
+    gap: 20px;
+}
+.creators__table__header__right{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.creators__table__header__left div:first-child{
+    width: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1280px) {
+    .creators__browse .container-sm div:first-child{
+        font-size: 36px;
+    }
+
+    .creators__browse .container-sm p{
+        font-size: 16px;
+    }
+
+    .creators__nav .container-sm div p{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 834px) {
+    .creators__browse .container-sm div:first-child{
+        font-size: 28px;
+    }
+
+    .creators__nav .container-sm div span{
+        display: none;
+    }
+
+    .creators__browse .container-sm input{
+        font-size: 12px;
+        padding-left: 10px;
+    }
+    
+
+}
