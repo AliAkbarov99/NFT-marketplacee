@@ -3,13 +3,15 @@ const express = require('express')
 const mongoose = require('mongoose')
 const Joi = require('joi')
 const app = express()
+const cors = require('cors')
+app.use(cors()) 
 let PORT = 8080
-
+app.use(express.json());
 mongoose.set("strictQuery", false);
 mongoose.connect(`mongodb+srv://nft-marketplace:bi3A8FulfZWxQuzI@cluster0.xtvensf.mongodb.net/?retryWrites=true&w=majority`).then(() => {
     console.log("Connected to MongoDB");
 }).catch((error) => console.err(error))
-app.use(express.json());
+
 
 const ArtistSchema = new mongoose.Schema({
     rank: Number,
@@ -29,7 +31,7 @@ const NftSchema = new mongoose.Schema({
     name: String,
     price: Number,
     highestBid: Number,
-    artist: {
+    artist:{
         artistId: String
     }
 })
@@ -49,7 +51,10 @@ const addArtistSchema = Joi.object({
 const addNftSchema = Joi.object({
     name: Joi.string().required(),
     price: Joi.number().required(),
-    highestBid: Joi.number().required()
+    highestBid: Joi.number().required(),
+    artist:{
+        artistId: Joi.string()
+    }
 })
 
 
@@ -89,11 +94,53 @@ app.post("/api/artists", (req, res, next) => {
 )
 
 app.get("/api/artists", (req, res) => {
-    ArtistModel.find(null, "rank name change nftSold volume nfts").populate("nfts").exec((error, data) => {
+    ArtistModel.find(null, "rank name change nftsSold volume nfts").populate("nfts").exec((error, data) => {
         if (error) return res.status(500).send({ error })
         res.send(data)
     })
 })
+
+
+app.post("/api/nfts/",(req,res,next)=>{
+    let { error } = addNftSchema.validate(req.body);
+    if (!error) {
+        next()
+    }
+    else {
+        const { details } = error
+        const message = details.map(i => i.message).join(",")
+        res.status(422).json({ error: message })
+    }
+},async (req,res)=>{
+
+    const newNft = new NftModel ({
+        ...req.body
+    })
+
+    await newNft.save()
+    await ArtistModel.findByIdAndUpdate(req.body.artist.artistId,{
+        $push:{
+            nfts: newNft._id,
+        },
+    })
+     res.send({ message: "NFT successfully created!", newNft })
+},(error,data)=>{
+    if(error) return res.status(500).send({error})
+
+    res.send(data)
+}
+
+)
+
+app.get("/api/nfts", (req, res) => {
+    NftModel.find(null,).exec((error, data) => {
+        if (error) return res.status(500).send({ error })
+        res.send(data)
+    })
+})
+
+
+
 
 
 

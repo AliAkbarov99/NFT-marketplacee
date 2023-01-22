@@ -1,0 +1,120 @@
+#artist__card{
+    padding: 12px 20px;
+    background-color: #3B3B3B;
+    border-radius: 20px;
+    display: flex;
+}
+
+.artist__card__left{
+    width: 40%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+}
+
+.artist__card__left__rank{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    background: #2B2B2B;
+    border-radius: 20px;
+    color: #858584;
+    font-family: 'Space Mono', monospace;
+}
+
+.artist__card__left__name{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.artist__card__left__name:hover{
+    transform: scale(0.95);
+}
+
+.artist__card__left__name img{
+    width: 60px;
+    height: 60px;
+}
+.artist__card__left__name h5{
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+
+
+
+
+
+.artist__card__right{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+.artist__card__right__change{
+    color: #00AC4F;
+    font-family: 'Space Mono', monospace;
+}
+
+.artist__card__right__sold{
+    font-family: 'Space Mono', monospace;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.artist__card__right__volume{
+    font-family: 'Space Mono', monospace;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.artist__card__right__add button{
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #018d42;
+    color: white;
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    border-radius: 7px;
+    transition: 0.3s all ease;
+}
+.artist__card__right__add button:hover{
+    transform: scale(0.95);
+}
+
+
+@media only screen and (max-width: 1280px) {
+    .artist__card__right__sold{
+        display: none;
+    }
+    .artist__card__left__rank{
+        background-color: transparent;
+    }
+    .artist__card__left__name img{
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media only screen and (max-width: 834px) {
+    .artist__card__right__change{
+        display: none;
+    }
+
+    .artist__card__left__name h5{
+        font-size: 16px;
+    }
+
+}

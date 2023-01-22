@@ -1,0 +1,50 @@
+#nft__card{
+    background-color: #2b2b2b;
+    color: white;
+    border-radius: 20px;
+    transition: 0.3s all ease;
+    cursor: pointer;
+
+}
+
+#nft__card:hover{
+    transform: scale(0.95);
+}
+
+.nft__card__properties span{
+    color: #858584;
+    font-size: 12px;
+    font-family: 'Space Mono', monospace;
+}
+.nft__card__properties h6{
+    font-size: 16px;
+    font-family: 'Space Mono', monospace;
+    margin-top: 5px;
+}
+
+.nft__card__content{
+    padding: 20px 30px;
+}
+
+.nft__card__name img{
+    width: 24px;
+    height: 24px;
+}
+.nft__card__name h5{
+    font-size: 22px;
+}
+.nft__card__name div{
+    margin-bottom: 25px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nft__card__name div span{
+    font-family: 'Space Mono', monospace;
+}
+
+.nft__card__properties{
+    display: flex;
+    justify-content: space-between;
+}

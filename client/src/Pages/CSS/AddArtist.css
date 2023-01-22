@@ -1,0 +1,39 @@
+#artist__form{
+    background-color: #2b2b2b;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.artist__form__content{
+    width: 800px;
+}
+
+.artist__form__content h2{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.artist__form__content form{
+
+    gap: 20px;
+}
+
+.artist__form__content form input{
+    padding: 20px 0px;
+    padding-left: 20px;
+    border-radius: 7px;
+    outline: none;
+}
+.artist__form__content button{
+    width: 200px;
+    padding: 20px 0px;
+    background-color: #A259FF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+

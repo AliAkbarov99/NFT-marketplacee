@@ -89,6 +89,19 @@
     background: #3B3B3B;
 }
 
+.market__nfts{
+    background-color: #3B3B3B;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid #2B2B2B;
+}
+
+.market__nfts .container-sm{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
 
 
 

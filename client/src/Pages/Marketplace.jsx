@@ -1,8 +1,22 @@
 import React from 'react'
 import './CSS/Marketplace.css'
 import searchicon from '../Images/search-icon.png'
+import NftCard from '../Components/NftCard/NftCard'
+import { useEffect } from 'react'
+import { useState } from 'react'
+import axios from 'axios'
 
 const Marketplace = () => {
+  const [nfts,setNfts] = useState([])
+  useEffect(()=>{
+    axios.get("http://localhost:8080/api/nfts").then(res=>{
+      setNfts(res.data)
+    })
+  },[])
+
+
+
+
   return (
     <div id='market'>
       <div className='market__browse'>
@@ -27,7 +41,14 @@ const Marketplace = () => {
           </div>
         </div>
       </div>
-
+      <div className='market__nfts'>
+        <div className='container-sm'>
+          {nfts && nfts.map(nft=>{
+            return <NftCard key={nft.id} name={nft.name} price={nft.price} highBid={nft.highestBid} artistId={nft.artist.artistId}/>
+          })}
+          
+        </div>
+      </div>
     </div>
   )
 }
